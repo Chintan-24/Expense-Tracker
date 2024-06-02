@@ -12,14 +12,14 @@
 
     <appender name="RollingFile"
         class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>D:/Project ET/Expence Tracker/Expense-Tracker/logs/ExpenceTracker.log</file>
+        <file>D:/logs/Expense-Tracker/ExpenceTracker.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <pattern>%d %-5level %logger{36} [%t] %msg%n</pattern>
         </encoder>
 
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- rollover daily and when the file reaches 10 MegaBytes -->
-            <fileNamePattern>D:/Project ET/Expence Tracker/Expense-Tracker/logs/archived/ExpenceTracker-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <fileNamePattern>D:/logs/Expense-Tracker/archived/ExpenceTracker-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>10MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
